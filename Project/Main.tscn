@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://animations/egg_juvenile_adult/egg_juvenile_adult.png" type="Texture" id=2]
+[ext_resource path="res://BoidNode.gd" type="Script" id=3]
+[ext_resource path="res://Line2D.gd" type="Script" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[node name="BoidNode" type="BoidNode"]
+script = ExtResource( 3 )
+
+[node name="PassiveParticles" type="PassiveParticles" parent="."]
+material = SubResource( 1 )
+amount = 1000
+texture = ExtResource( 2 )
+anim_speed = 1.0
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 542.173, -306.089, 493.054, -218.984 )
+script = ExtResource( 4 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+invert_enable = true
+polygon = PoolVector2Array( 498.399, 52.8223, 709.524, 171.877, 879.375, 71.8711, 919.061, 252.835, 1216.96, 340.923, 882.55, 386.177, 1123.84, 597.301, 831.754, 538.567, 682.538, 668.734, 604.755, 535.392, 255.527, 638.573, 379.344, 422.687, 96.7869, 403.638, 30.5178, 211.205, 204.925, 236.635, 249.422, 214.387, 187.973, 209.089, 90.5027, 190.019, 37.5296, 151.878, 145.796, 92.5647, 224.782, 116.369, 341.667, 159.254, 332.465, 37.4533 )
