@@ -11,6 +11,8 @@ particles_anim_v_frames = 3
 particles_anim_loop = true
 
 [node name="BoidNode" type="BoidNode"]
+range = 50.0
+force = 1.0
 script = ExtResource( 3 )
 
 [node name="PassiveParticles" type="PassiveParticles" parent="."]
@@ -20,7 +22,7 @@ texture = ExtResource( 2 )
 anim_speed = 1.0
 
 [node name="Line2D" type="Line2D" parent="."]
-points = PoolVector2Array( 542.173, -306.089, 493.054, -218.984 )
+points = PoolVector2Array( 373.496, 330.86, 380.222, 231.086 )
 script = ExtResource( 4 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]

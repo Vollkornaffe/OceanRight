@@ -17,5 +17,5 @@ func _ready():
 func _process(_delta):
 	var p = get_point_position(0)
 	#print(get_parent().sdf.get_value(p))
-	#set_point_position(1, p + 100 * get_parent().sdf.get_gradient(p))
+	set_point_position(1, p + 100 * get_parent().sdf.get_gradient(p))
 	pass
