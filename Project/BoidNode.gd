@@ -19,4 +19,4 @@ func _ready():
 
 
 func _physics_process(delta):
-	step(get_node("PassiveParticles"), sdf, 2*delta)
+	step(get_node("PassiveParticles"), sdf, delta)

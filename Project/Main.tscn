@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://animations/egg_juvenile_adult/egg_juvenile_adult.png" type="Texture" id=2]
 [ext_resource path="res://BoidNode.gd" type="Script" id=3]
-[ext_resource path="res://Line2D.gd" type="Script" id=4]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 particles_animation = true
@@ -11,25 +10,23 @@ particles_anim_v_frames = 3
 particles_anim_loop = true
 
 [node name="BoidNode" type="BoidNode"]
-boundary_range = 25.0
-boundary_force = 5.0
-boid_detection_range = 25.0
-boid_detection_angle = 200.0
-boid_avoiding = 10.0
-boid_aligning = 4.28447e-09
-boid_clumping = 4.48416e-44
+boundary_range = 50.0
+boundary_force = 100.0
+boid_detection_range = 50.0
+boid_detection_angle = 360.0
+boid_avoiding = 50.0
+boid_aligning = 2.0
+boid_clumping = 20.0
+linear_drag = 0.1
 script = ExtResource( 3 )
 
 [node name="PassiveParticles" type="PassiveParticles" parent="."]
 material = SubResource( 1 )
-amount = 100
+amount = 500
 texture = ExtResource( 2 )
 anim_speed = 1.0
 
-[node name="Line2D" type="Line2D" parent="."]
-points = PoolVector2Array( 373.496, 330.86, 380.222, 231.086 )
-script = ExtResource( 4 )
-
 [node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0, -2.11896 )
 invert_enable = true
-polygon = PoolVector2Array( 498.399, 52.8223, 709.524, 171.877, 879.375, 71.8711, 919.061, 252.835, 1216.96, 340.923, 882.55, 386.177, 1123.84, 597.301, 831.754, 538.567, 682.538, 668.734, 604.755, 535.392, 255.527, 638.573, 379.344, 422.687, 96.7869, 403.638, 30.5178, 211.205, 204.925, 236.635, 249.422, 214.387, 187.973, 209.089, 90.5027, 190.019, 37.5296, 151.878, 145.796, 92.5647, 224.782, 116.369, 341.667, 159.254, 332.465, 37.4533 )
+polygon = PoolVector2Array( 498.399, 52.8223, 699.795, 66.6579, 879.375, 71.8711, 1100.27, 134.463, 1216.96, 340.923, 1218.93, 480.908, 1123.84, 597.301, 1024.59, 605.771, 970.846, 554.859, 1020.34, 385.153, 969.432, 342.727, 900.135, 359.697, 819.525, 611.427, 682.538, 668.734, 550.825, 583.143, 573.452, 441.722, 540.925, 375.254, 450.415, 389.396, 388.19, 563.344, 255.527, 638.573, 119.21, 540.238, 96.7869, 403.638, 30.5178, 211.205, 37.5296, 151.878, 145.796, 92.5647, 332.465, 37.4533 )
