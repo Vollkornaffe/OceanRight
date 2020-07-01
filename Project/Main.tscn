@@ -11,13 +11,18 @@ particles_anim_v_frames = 3
 particles_anim_loop = true
 
 [node name="BoidNode" type="BoidNode"]
-range = 50.0
-force = 1.0
+boundary_range = 25.0
+boundary_force = 5.0
+boid_detection_range = 25.0
+boid_detection_angle = 200.0
+boid_avoiding = 10.0
+boid_aligning = 4.28447e-09
+boid_clumping = 4.48416e-44
 script = ExtResource( 3 )
 
 [node name="PassiveParticles" type="PassiveParticles" parent="."]
 material = SubResource( 1 )
-amount = 1000
+amount = 100
 texture = ExtResource( 2 )
 anim_speed = 1.0
 
